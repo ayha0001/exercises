@@ -75,7 +75,7 @@ function animationStart() {
   player1.addEventListener("animationend", animationEnd, { once: true });
 }
 
-// Funktionen kaldes når animationen slutter, fjerner "shake" klassen og viser svaret
+// Funktionen kaldes når animationen slutter, fjerner "shake" klassen og viser svaret,
 function animationEnd() {
   player1.classList.remove("shake");
   player2.classList.remove("shake");
