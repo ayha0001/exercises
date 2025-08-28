@@ -25,8 +25,17 @@ function addEventListenersToButtons() {
   scissorButton.addEventListener("click", scissorClick);
 }
 
+function hideResults() {
+  // Skjuler alle resultater først
+  draw.classList.add("hidden");
+  win.classList.add("hidden");
+  lose.classList.add("hidden");
+}
+
 // Funktionen for rock kaldes når der klikkes på rock knappen
 function rockClick() {
+  // Skjuler tidligere resultater, når der klikkes igen
+  hideResults();
   console.log("Rock");
   userChoice = "rock";
   // Kalder funktionen computerGuess for at få computerens valg
@@ -37,6 +46,8 @@ function rockClick() {
 
 // Funktionen for paper kaldes når der klikkes på paper knappen
 function paperClick() {
+  // Skjuler tidligere resultater, når der klikkes igen
+  hideResults();
   console.log("Paper");
   userChoice = "paper";
   // Kalder funktionen computerGuess for at få computerens valg
@@ -47,6 +58,8 @@ function paperClick() {
 
 // Funktionen for scissors kaldes når der klikkes på scissors knappen
 function scissorClick() {
+  // Skjuler tidligere resultater, når der klikkes igen
+  hideResults();
   console.log("Scissors");
   userChoice = "scissors";
   // Kalder funktionen computerGuess for at få computerens valg
@@ -93,20 +106,18 @@ function showAnswer() {
 }
 
 function screenResult() {
-  // Skjuler alle resultater først
-  draw.classList.add("hidden");
-  win.classList.add("hidden");
-  lose.classList.add("hidden");
   // Viser det korrekte resultat baseret på brugerens og computerens valg
   if (userChoice === computerChoice) {
     draw.classList.remove("hidden");
   } else if (
+    // Hvis brugerens valg slår computerens valg
     (userChoice === "rock" && computerChoice === "scissors") ||
     (userChoice === "paper" && computerChoice === "rock") ||
     (userChoice === "scissors" && computerChoice === "paper")
   ) {
     win.classList.remove("hidden");
   } else {
+    // Ellers taber brugeren
     lose.classList.remove("hidden");
   }
 }
