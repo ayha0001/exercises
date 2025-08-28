@@ -90,16 +90,10 @@ function animationStart() {
 
 // Funktionen kaldes når animationen slutter, fjerner "shake" klassen og viser svaret,
 function animationEnd() {
-  player1.classList.remove("shake");
-  player2.classList.remove("shake");
-  showAnswer();
-}
-
-// Funktionen viser brugerens og computerens valg ved at opdatere deres klasser
-function showAnswer() {
-  // Resetter tidligere valg
-  player1.classList.remove("rock", "paper", "scissors");
-  player2.classList.remove("rock", "paper", "scissors");
+  // Fjerner "shake" klassen fra begge spillere
+  // Fjerner også tidligere valg for at undgå overlap
+  player1.classList.remove("shake, rock", "paper", "scissors");
+  player2.classList.remove("shake, rock", "paper", "scissors");
   player1.classList.add(userChoice);
   player2.classList.add(computerChoice);
   screenResult();
