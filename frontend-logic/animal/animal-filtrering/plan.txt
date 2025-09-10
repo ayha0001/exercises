@@ -1,0 +1,18 @@
+Filtrering
+- prøv et hardcodet filter – kun kattene
+- prøv et andet filter – kun hundene
+- tilføj brugerinteraktivitet
+- tilføj “alle”-filteret
+- tilføj noget oprydning
+
+Sorting
+- prøv hardcodet sortering – efter navn
+- prøv hardcodet sortering – efter type
+- tilføj brugerinteraktivitet
+- lav en mere generisk sorteringsfunktion
+- skift sorteringsretning
+- tilføj noget oprydning
+
+Kombiner filtrering AND sorting !
+
+- andre rettelser efter det
