@@ -1,3 +1,11 @@
 [data-theme="light"] {
   --bg: ;
 }
+
+[data-theme="dark"] {
+  --bg: ;
+}
+
+[data-theme="Hawaii"] {
+  --bg: ;
+}

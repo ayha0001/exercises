@@ -1,0 +1,40 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/**********/
+
+:root{
+    --header-bg-light: lightyellow;
+    --header-col-light: brown;
+}
+
+header {
+  padding: 30px;
+  background-color: lightyellow;
+  color: brown;
+  font-size: 40px;
+}
+
+main {
+  padding: 90px 30px;
+  background-color: brown;
+  color: lightyellow;
+  font-size: 25px;
+}
+
+footer {
+  padding: 30px;
+  background-color: lightyellow;
+  color: brown;
+  font-size: 20px;
+}
